@@ -5,9 +5,9 @@ from PIL import Image
 import pandas as pd
 
 # 1. CREDENTIALS (Secure these in Streamlit Cloud Secrets later)
-GEMINI_KEY = "AIzaSyAJBpU17seAb-QnW8AmIiB5hs6IdLFLrpw"
-SUPABASE_URL = "https://xxqrcppczwukedofueqt.supabase.co"
-SUPABASE_KEY = "sb_publishable_DTIa6dGUlihsJYNuLEtb8A_PWwfMe4Y"
+GEMINI_KEY = st.secrets["GEMINI_KEY"]
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 
 # Setup Clients
 genai.configure(api_key=GEMINI_KEY)
