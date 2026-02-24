@@ -1,3 +1,20 @@
+# Simple SaaS Login Logic
+st.sidebar.title("🔐 User Access")
+user_email = st.sidebar.text_input("Enter Email to access your stats")
+
+if not user_email:
+    st.warning("Please enter your email in the sidebar to start tracking.")
+    st.stop() # This stops the rest of the app from running until they type an email
+
+# Now, update your Supabase save logic to include the email
+data = {
+    "user_id": user_email, # This links the data to the specific person
+    "weight": w, 
+    "body_fat": bf,
+    # ... other metrics
+}
+
+
 import streamlit as st
 import google.generativeai as genai
 from supabase import create_client
