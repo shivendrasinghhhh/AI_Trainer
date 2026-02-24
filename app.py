@@ -11,7 +11,7 @@ SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 
 # Setup Clients
 genai.configure(api_key=GEMINI_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('models/gemini-1.5-flash')
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 st.set_page_config(page_title="AI Body Trainer Pro", layout="wide")
